@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState } from "react";
 import { Navigate } from 'react-router-dom';
 
@@ -31,15 +30,13 @@ function Login(props: {setName: (name: string) => void}) {
       }
     return (
         <div>
-            <form className="form-signin" onSubmit={submit}>
-                <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
-                <input type="email" id="inputEmail" className="form-control" placeholder="Email address"
+            <h2 className="h3 text-center mt-4 pt-4 font-weight-normal">Se connecter</h2>
+            <form className="form-signin border border-secondary rounded bg-secondary" onSubmit={submit}>
+                <input type="email" className="form-control" placeholder="Email address"
                   onChange={e => setEmail(e.target.value)} required autoFocus/><br/>
-                <input type="password" id="inputPassword" className="form-control" placeholder="Password"
+                <input type="password" className="form-control" placeholder="Password"
                   onChange={e => setPassword(e.target.value)} required/>
-                <div className="checkbox mb-3">
-                </div> 
-                <button className="btn btn-primary form-control" type="submit">Sign in</button>
+                <button className="btn btn-dark form-control mt-2" type="submit">Connexion</button>
             </form>
         </div>
     );

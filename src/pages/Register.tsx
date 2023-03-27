@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState } from "react";
 import { Navigate } from 'react-router-dom';
 
@@ -34,8 +33,8 @@ function register() {
     
     return (
         <div>
-             <form className="form-signin" onSubmit={submit}>
-                <h1 className="h3 mb-3 font-weight-normal">Please sign up</h1>
+             <h3 className="h3 text-center pt-4 mt-4 font-weight-normal">S'inscrire</h3>
+             <form className="form-signin border border-secondary bg-secondary rounded" onSubmit={submit}>
                 <input type="text" id="inputname" className="form-control" placeholder="name"
                 onChange={e => setName(e.target.value)} required autoFocus/><br/>
                 <input type="email" id="inputEmail" className="form-control" placeholder="Email address"
@@ -44,7 +43,7 @@ function register() {
                 onChange={e => setPassword(e.target.value)} required/>
                 <div className="checkbox mb-3">
                 </div> 
-                <button className="btn btn-primary form-control" type="submit">Register</button>
+                <button className="btn btn-dark form-control" type="submit">Enrégistrer</button>
             </form>
         </div>
     );
